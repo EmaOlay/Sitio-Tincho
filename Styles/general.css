@@ -1,0 +1,11 @@
+body {
+    background:linear-gradient(90deg, rgba(25,6,41,1) 0%, rgba(78,23,126,1) 75%, rgba(133,28,222,1) 100%);;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: rgba(133, 28, 222, 1);
+}
+
+.mi_header{
+    display: flex;
+    justify-content: center;
+}
