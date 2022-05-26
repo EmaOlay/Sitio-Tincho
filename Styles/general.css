@@ -1,12 +1,79 @@
+:root{
+    --blanquito: #FDE4FE;
+    --violetita:#E693F5;
+}
+
+@font-face {
+    font-family:zrnic;
+    src: url(../Fonts/zrnic.ttf);
+  }
+
 body {
+    font-family:zrnic;
     background: rgb(25,6,41);
     background: linear-gradient(90deg, rgba(25,6,41,1) 0%, rgba(78,23,126,1) 60%, rgba(92,24,150,1) 80%, rgba(122,27,201,1) 100%);
     background-repeat: no-repeat;
     background-size: 100%;
-    color: rgba(133, 28, 222, 1);
+    color: var(--blanquito);
+    font-size: 2rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.hover-underline-animation{
+    text-decoration: none;
+    color: var(--blanquito);
+}
+.hover-underline-animation:hover{
+    text-decoration: none;
+    color: var(--violetita);
+}
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+  
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--violetita);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .mi_header{
+    margin-top: 2vh;
     display: flex;
+    align-items: center;
     justify-content: center;
+}
+.anclas{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60vw;
+}
+
+p{
+    /*Lo que queria tincho*/
+    mix-blend-mode: overlay;
+}
+#particles-js{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: inherit;
 }
