@@ -26,7 +26,8 @@ body {
 }
 .hover-underline-animation:hover{
     text-decoration: none;
-    color: var(--violetita);
+    /* color: var(--violetita); */
+    mix-blend-mode: overlay;
 }
 .hover-underline-animation {
     display: inline-block;
@@ -67,7 +68,7 @@ body {
 
 p{
     /*Lo que queria tincho*/
-    mix-blend-mode: overlay;
+    /* mix-blend-mode: overlay; */
 }
 #particles-js{
     position: absolute;
