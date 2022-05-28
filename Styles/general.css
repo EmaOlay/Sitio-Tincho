@@ -1,8 +1,11 @@
 :root{
     --blanquito: #FDE4FE;
     --violetita:#E693F5;
+    --glow: #eea2fc;
 }
-
+*{
+    box-sizing: border-box;
+}
 @font-face {
     font-family:zrnic;
     src: url(../Fonts/zrnic.ttf);
@@ -17,7 +20,7 @@ body {
     color: var(--blanquito);
     font-size: 2rem;
     overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 .hover-underline-animation{
@@ -26,8 +29,7 @@ body {
 }
 .hover-underline-animation:hover{
     text-decoration: none;
-    /* color: var(--violetita); */
-    mix-blend-mode: overlay;
+    color: var(--violetita);
 }
 .hover-underline-animation {
     display: inline-block;
@@ -43,8 +45,10 @@ body {
     bottom: 0;
     left: 0;
     background-color: var(--violetita);
+    box-shadow: 0px 0px 5px 0px var(--glow);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
+
 }
   
 .hover-underline-animation:hover:after {
@@ -68,7 +72,7 @@ body {
 
 p{
     /*Lo que queria tincho*/
-    /* mix-blend-mode: overlay; */
+    mix-blend-mode: overlay;
 }
 #particles-js{
     position: absolute;
@@ -78,3 +82,29 @@ p{
     width: 100vw;
     background: inherit;
 }
+
+
+/*Lateral Ruler*/
+.ruler {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    height: 25px;
+    counter-reset: lines;
+}
+.ruler div{
+    font-size: 1px;
+    margin: 5px;
+    background-color: white;
+}
+.ruler span{
+    position: relative;
+    top: -237px;
+    right: 20px;
+}
+/*End Ruler*/
+
+aside{
+    position: sticky;
+}
+

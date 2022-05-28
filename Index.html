@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Martin Savio | 3D-Artist Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./Imagenes/icono.jpg">
     <link rel="stylesheet" href="./Styles/general.css">
 </head>
+
 <body>
     <div id="particles-js"></div>
+
+
     <header class="mi_header">
         <div class="anclas">
+
             <a class="hover-underline-animation" href="#">Home</a>
             <a class="hover-underline-animation" href="#">About</a>
             <a class="hover-underline-animation" href="#">Contact</a>
             <a class="hover-underline-animation" href="#">Sing in</a>
         </div>
     </header>
+    <aside id="app1">
+        <ul id="ruler" class='ruler'>
+            <div v-for="line in lineas" v-bind:id="line"> - </div>
+            <span>»</span>
+        </ul>
+        
+        
+    </aside>
     <main>
+        <br><br><br><br><br><br><br><br><br><br>
         <h1>Lorem Ipsum</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur voluptatum voluptatem inventore tempore eaque reiciendis molestiae doloribus error suscipit ratione! Atque, quas consequatur minima incidunt qui illo voluptate sit tenetur?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur voluptatum voluptatem inventore tempore
+            eaque reiciendis molestiae doloribus error suscipit ratione! Atque, quas consequatur minima incidunt qui
+            illo voluptate sit tenetur?</p>
     </main>
-    
+
+
+    <!-- Vue js -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- My Js -->
+    <script src="./JS/app.js"></script>
+    <!-- Particle Js -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
         /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-        particlesJS.load('particles-js', 'particles-config.json', function() {
-        console.log('callback - particles.js config loaded');
+        particlesJS.load('particles-js', 'particles-config.json', function () {
+            console.log('callback - particles.js config loaded');
         });
     </script>
 </body>
+
 </html>
